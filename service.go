@@ -22,6 +22,7 @@ type DBService interface {
 	services.Startable
 	WithName(string) DBService
 	WithConfig(DBServiceConfig) DBService
+	DB() *sql.DB
 }
 
 type dbService struct {
@@ -42,6 +43,10 @@ func (service *dbService) WithName(name string) DBService {
 func (service *dbService) WithConfig(config DBServiceConfig) DBService {
 	service.config = config
 	return service
+}
+
+func (service *dbService) DB() *sql.DB {
+	return service.db
 }
 
 // Name will return a human identifiable name for this service. Ex: Postgresql Connection.
