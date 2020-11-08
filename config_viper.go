@@ -3,7 +3,7 @@ package srvsql
 import (
 	"time"
 
-	"github.com/ory/viper"
+	"github.com/spf13/viper"
 )
 
 type viperConfig struct {
