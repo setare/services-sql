@@ -1,4 +1,4 @@
-module github.com/setare/services-sql
+module github.com/setare/go-rscsrv-sql
 
 go 1.14
 
